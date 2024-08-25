@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Web Application.</title>
+  <style>
+    .tabs {
+      display: flex;
+    }
+
+    .tab {
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background-color: #f2f2f2;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+ .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+ .active {
+  color: #0000FF; 
+  font-weight: 600;
+}
+
+    .menu-item-info {
+      flex-grow: 3;
+    }
+  </style>
+
+
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script>
+   const categories = ["Lunch", "Dinner", "Sushi", "Breakfast", "Desserts"];
+   
+  function getRandomCategory() {
+      const randomIndex = Math.floor(Math.random() * categories.length);
+      return categories[randomIndex];
+    }
+
+    function loadRandomCategory() {
+      const randomCategory = getRandomCategory();
+      loadMenu(randomCategory);
+    }
+
+    function loadMenu(category) {
+      // Your existing code to load the menu for the given category
+          $("a").removeClass("active");
+
+location.href = "#"+category;
+document.getElementById("SPS").innerHTML="category: "+ category;
+
+
+ $("#"+category).addClass("active");
+    
+}
+ function toggleTab(index) {
+      const tabs = document.querySelectorAll('.tab');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      // Remove active classes from all tabs and tab contents
+      tabs.forEach((tab, i) => {
+        tab.classList.remove('active');
+        tabContents[i].classList.remove('active');
+      });
+if(index==1)
+{
+loadRandomCategory();
+
+
+}
+      // Add active class to the clicked tab and its corresponding content
+      tabs[index].classList.add('active');
+      tabContents[index].classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" onclick="toggleTab(0)">menu</div>
+    <div class="tab" onclick="toggleTab(1)">Specials</div>
+    <div class="tab" onclick="toggleTab(2)">Map</div>
+  </div>
+  <div class="tab-content active">
+    <h2>menu</h2>
+    <p>menu.</p>
+  </div>
+  <div class="tab-content">
+    <h2>Specials</h2>
+    <p id="SPS">Specials</p>
+  </div>
+  <div class="tab-content">
+    <h2>Map</h2>
+    <p>Map.</p>
+  </div>
+
+
+<a href="#Lunch" id="Lunch">
+  <div class="menu-item">
+  
+    <div class="menu-item-info">
+      <h2>Lunch</h2>
+      <p>Delicious lunch options.</p>
+    </div>
+  </div>
+</a>
+<a href="#Dinner" id="Dinner">
+  <div class="menu-item">
+      <div class="menu-item-info">
+      <h2>Dinner</h2>
+      <p>Satisfying dinner choices.</p>
+    </div>
+  </div>
+</a>
+<a href="#Sushi" id="Sushi">
+
+  <div class="menu-item">
+
+    <div class="menu-item-info">
+      <h2>Sushi</h2>
+      <p>Fresh and flavorful sushi creations.</p>
+    </div>
+  </div>
+</a>
+<a href="#Breakfast" id="Breakfast">
+  <div class="menu-item">
+   
+    <div class="menu-item-info">
+      <h2>Breakfast</h2>
+      <p>Energizing breakfast options.</p>
+    </div>
+  </div>
+</a>
+<a href="#Dessert" id="Dessert">
+  <div class="menu-item">
+      <div class="menu-item-info">
+      <h2>Dessert</h2>
+      <p>Indulge in sweet treats.</p>
+    </div>
+  </div>
+</a>
+ 
+</body>
+</html>
