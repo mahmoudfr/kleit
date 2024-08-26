@@ -233,7 +233,7 @@ h3.menu-item-title {
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
-    background: url('https://i0.wp.com/www.designlike.com/wp-content/uploads/2018/03/restaurant-1948732_1920.jpg') no-repeat;
+    background: url('https://th.bing.com/th/id/OIP.mrqhbQMSODLGHspNavqSeAHaEo?pid=ImgDet&w=174&h=97.875&c=7&dpr=1.3') no-repeat;
     height: 675px;
   }
 }
@@ -251,7 +251,7 @@ h3.menu-item-title {
 
   /* Home Page */
   .container .jumbotron {
-    background: url('https://th.bing.com/th/id/OIP.oetnNwsceeQQo36_Qz27MQHaE8?pid=ImgDet&w=174&h=116.18124999999999&c=7&dpr=1.3') no-repeat;
+    background: url('https://th.bing.com/th/id/OIP.mrqhbQMSODLGHspNavqSeAHaEo?pid=ImgDet&w=174&h=81.39379474940334&c=7&dpr=1.3') no-repeat;
     height: 558px;
   }
   /* End Home Page */
